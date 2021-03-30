@@ -1,0 +1,199 @@
+@font-face {
+  font-family: NunitoSans;
+  src: url(/fonts/NunitoSans-Light.ttf);
+}
+
+* {
+  margin: 0;
+  font-family: NunitoSans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.background {
+  background-color: #111827;
+}
+
+.nav_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  letter-spacing: 2px;
+  background-color: #111827;
+  padding: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.logo {
+  color: white;
+}
+
+.nav_items {
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  height: 89vh;
+  background-image: url(/images/hero_image.jpg);
+  background-size: cover;
+  background-color: #333;
+  background-attachment: fixed;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+  margin-bottom: 10vh;
+}
+
+.down_arrow {
+  width: 50px;
+  fill: white;
+}
+
+.down_arrow_animate {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: down_arrow_bounce 2s linear infinite;
+          animation: down_arrow_bounce 2s linear infinite;
+}
+
+.typeWriter {
+  font-size: 75px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cursor {
+  font-weight: bold;
+  color: #008cff;
+  -webkit-animation: blink_cursor 1s linear infinite;
+          animation: blink_cursor 1s linear infinite;
+}
+
+.about {
+  height: 50vh;
+  position: relative;
+}
+
+.profile_pic {
+  background-color: white;
+  background-image: url(/images/me.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 10000px;
+  position: absolute;
+  top: 72vh;
+  left: 36vh;
+}
+
+.profile_pic_animate {
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 10000px;
+  position: absolute;
+  top: 72vh;
+  left: 36vh;
+  -webkit-animation: profile_pic_ping 3s linear infinite;
+          animation: profile_pic_ping 3s linear infinite;
+}
+
+@-webkit-keyframes blink_cursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink_cursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes down_arrow_bounce {
+  0% {
+    top: 70%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: 75%;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    top: 70%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes down_arrow_bounce {
+  0% {
+    top: 70%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: 75%;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    top: 70%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes profile_pic_ping {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes profile_pic_ping {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
