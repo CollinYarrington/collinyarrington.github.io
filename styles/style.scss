@@ -25,21 +25,22 @@ html {
 .nav_div {
     display: flex;
     justify-content: space-around;
-    letter-spacing: 2px;
     background-color: $background;
     padding: 10px;
-    margin-top: auto;
+    padding-top: auto;
     margin-bottom: auto;
 }
 
 .logo {
     color: white;
+    font-size: 25px;
 }
 
 .nav_items{  
     display: inline-block;
     color: white;
-    font-size: 18px;
+    // margin: 12px auto auto 12px;
+    font-size: 20px;
 }
 
 a, a:visited{
@@ -52,7 +53,7 @@ a, a:visited{
     height: 89vh;
     background-image: url(/images/hero_image.jpg);
     background-size: cover;
-    background-color: #333;
+    background-color: $background;
     background-attachment: fixed;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100% );
@@ -74,7 +75,7 @@ a, a:visited{
 
 .typeWriter{
     font-size: 75px;
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -91,13 +92,21 @@ a, a:visited{
 // about
 
 .about{
+    opacity: 0;
     height: 50vh;
-    position: relative;
-    // background-color:rgb(0, 45, 82);
+    width: 50%;
+    margin: auto;
+    transition: 2s ease-in;
+    background-color: indigo;
+    
+}
+
+.about.appear{
+    opacity: 1;
 }
 
 .profile_pic{
-    background-color: white;
+    background-color: #111827;
     background-image: url(/images/me.jpeg);
     background-size: cover;
     background-position: center;
@@ -106,8 +115,15 @@ a, a:visited{
     border-radius: 10000px;
     position: absolute;
     top: 72vh;
-    left: 36vh;
+    left: 26vh;
+    opacity: 0;
     // transform: translate(-50%,-50%);
+    transition: 1s ease-in;
+}
+
+.profile_pic.appear{
+    opacity: 1;
+    left: 36vh;
 }
 
 .profile_pic_animate{
@@ -117,9 +133,42 @@ a, a:visited{
     border-radius: 10000px;
     position: absolute;
     top: 72vh;
-    left: 36vh;
+    left: 26vh;
+    opacity: 0;
     // transform: translate(-50%,-50%);
     animation: profile_pic_ping 3s linear infinite;
+    animation-delay: 2s;
+    transition: 1s ease-in;
+}
+
+.profile_pic_animate.appear{
+    opacity: 1;
+    left: 36vh;
+}
+
+.heading_format{
+    display: flex;
+}
+
+.heading{
+    color: white;
+    font-size: 25px;  
+    white-space: nowrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.heading_placeholder{
+    width: 100%;
+    height: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: $cursor;
+    border-radius: 12px;
+}
+
+.paragraph{
+    color: white;
 }
 
 
@@ -138,5 +187,5 @@ a, a:visited{
 
 @keyframes profile_pic_ping{
     0%{opacity:1; transform: scale(1.0); }
-    100%{opacity:0; transform: scale(1.1); }
+    100%{opacity:0; transform: scale(1.2); }
 }

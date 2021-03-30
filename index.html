@@ -7,18 +7,20 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <script src="/scripts/typeWriter.js"></script>
     <script src="/scripts/particle.js"></script>
+    <script src="/scripts/animateScroll.js"></script>
     <title>Document</title>
 </head>
 <body>
 <div class="background">
-    <nav class="nav_div">
-        <h1 class="logo">Portfolio</h1>
-        <ul >
+    <nav class="">
+        <div class="nav_div">
+        <p class="logo">Portfolio</p>
+        <ul style="margin-top: auto; margin-bottom: auto;">
             <li class="nav_items"><a href="#about">About me</a></li>
-            <li class="nav_items"><a href="">Projects</a></li>
-            <li class="nav_items"><a href="">Contact me</a></li>
+            <li class="nav_items"><a href="#projects">Projects</a></li>
+            <li class="nav_items"><a href="#contact">Contact me</a></li>
         </ul>
-     
+        </div>
     </nav>
 
     <header class="hero" id="particle-canvas">
@@ -37,12 +39,42 @@
         </div> -->
 
     </header>
-    <div class="profile_pic_animate"></div>
-    <div class="profile_pic"></div>
+    <div class="profile_pic_animate fade-in"></div>
+    <div class="profile_pic fade-in"></div>
     
-    <div id="about" class="about">
-        <h3>About</h3>
+    <div id="about" class="about fade-in">
+        <div class="heading_format">
+            <div class="heading_placeholder"></div>
+            <div class="heading">
+                <p>About Me</p>
+            </div>
+            <div class="heading_placeholder"></div>
+        </div>
+    </br>
+        
+
+        <p class="paragraph">
+            I was born in 1998 August 29th in South Africa Western Cape. 
+            By the age of 12 I developed an interest for all kinds of 
+            Programming technologies. My dad is  a software engineer and 
+            he taught me abit of the basics of javascript. Then I made a 
+            bet with my father that if i could develop anything using any 
+            programming language he would give me 1000 rand.  That was all 
+            the motivation i needed to start working on my career.
+        </p>
+
+
     </div>
+
+    <div id="projects" class="about fade-in">
+        <div class="heading_format">
+            <div class="heading_placeholder"></div>
+            <div class="heading">
+                <p>Projects</p>
+            </div>
+            <div class="heading_placeholder"></div>
+        </div>
+    </br>
 
 </div>
 </body>

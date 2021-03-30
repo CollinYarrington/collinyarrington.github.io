@@ -22,21 +22,21 @@ html {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  letter-spacing: 2px;
   background-color: #111827;
   padding: 10px;
-  margin-top: auto;
+  padding-top: auto;
   margin-bottom: auto;
 }
 
 .logo {
   color: white;
+  font-size: 25px;
 }
 
 .nav_items {
   display: inline-block;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 a, a:visited {
@@ -48,7 +48,7 @@ a, a:visited {
   height: 89vh;
   background-image: url(/images/hero_image.jpg);
   background-size: cover;
-  background-color: #333;
+  background-color: #111827;
   background-attachment: fixed;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
@@ -73,7 +73,7 @@ a, a:visited {
 
 .typeWriter {
   font-size: 75px;
-  position: absolute;
+  position: fixed;
   top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -88,12 +88,21 @@ a, a:visited {
 }
 
 .about {
+  opacity: 0;
   height: 50vh;
-  position: relative;
+  width: 50%;
+  margin: auto;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+  background-color: indigo;
+}
+
+.about.appear {
+  opacity: 1;
 }
 
 .profile_pic {
-  background-color: white;
+  background-color: #111827;
   background-image: url(/images/me.jpeg);
   background-size: cover;
   background-position: center;
@@ -102,6 +111,14 @@ a, a:visited {
   border-radius: 10000px;
   position: absolute;
   top: 72vh;
+  left: 26vh;
+  opacity: 0;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.profile_pic.appear {
+  opacity: 1;
   left: 36vh;
 }
 
@@ -112,9 +129,46 @@ a, a:visited {
   border-radius: 10000px;
   position: absolute;
   top: 72vh;
-  left: 36vh;
+  left: 26vh;
+  opacity: 0;
   -webkit-animation: profile_pic_ping 3s linear infinite;
           animation: profile_pic_ping 3s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.profile_pic_animate.appear {
+  opacity: 1;
+  left: 36vh;
+}
+
+.heading_format {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heading {
+  color: white;
+  font-size: 25px;
+  white-space: nowrap;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.heading_placeholder {
+  width: 100%;
+  height: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #008cff;
+  border-radius: 12px;
+}
+
+.paragraph {
+  color: white;
 }
 
 @-webkit-keyframes blink_cursor {
@@ -179,8 +233,8 @@ a, a:visited {
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -192,8 +246,8 @@ a, a:visited {
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 /*# sourceMappingURL=style.css.map */
