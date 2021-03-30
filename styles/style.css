@@ -94,7 +94,6 @@ a, a:visited {
   margin: auto;
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
-  background-color: indigo;
 }
 
 .about.appear {
