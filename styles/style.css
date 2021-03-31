@@ -51,24 +51,9 @@ a, a:visited {
   background-color: #111827;
   background-attachment: fixed;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+  -webkit-clip-path: inset(0px 0px 0px 0px);
+          clip-path: inset(0px 0px 0px 0px);
   margin-bottom: 10vh;
-}
-
-.down_arrow {
-  width: 50px;
-  fill: white;
-}
-
-.down_arrow_animate {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-animation: down_arrow_bounce 2s linear infinite;
-          animation: down_arrow_bounce 2s linear infinite;
 }
 
 .typeWriter {
@@ -87,6 +72,14 @@ a, a:visited {
           animation: blink_cursor 1s linear infinite;
 }
 
+.top_div.svg {
+  width: 100%;
+  position: absolute;
+  top: 70vh;
+  fill: #111827;
+  z-index: 0;
+}
+
 .about {
   opacity: 0;
   height: 50vh;
@@ -94,6 +87,8 @@ a, a:visited {
   margin: auto;
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
+  position: relative;
+  z-index: 100;
 }
 
 .about.appear {
@@ -112,6 +107,7 @@ a, a:visited {
   top: 72vh;
   left: 26vh;
   opacity: 0;
+  z-index: 100;
   -webkit-transition: 1s ease-in;
   transition: 1s ease-in;
 }
@@ -130,6 +126,7 @@ a, a:visited {
   top: 72vh;
   left: 26vh;
   opacity: 0;
+  z-index: 100;
   -webkit-animation: profile_pic_ping 3s linear infinite;
           animation: profile_pic_ping 3s linear infinite;
   -webkit-animation-delay: 2s;

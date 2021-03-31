@@ -56,22 +56,23 @@ a, a:visited{
     background-color: $background;
     background-attachment: fixed;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100% );
+    // clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100% );
+    clip-path: inset(0px 0px 0px 0px);
     margin-bottom: 10vh;
 }
 
-.down_arrow{
-    width: 50px;
-    fill: white;
-}
+// .down_arrow{
+//     width: 50px;
+//     fill: white;
+// }
 
-.down_arrow_animate{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: down_arrow_bounce 2s linear infinite;
-}
+// .down_arrow_animate{
+//     position: absolute;
+//     top: 100%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     animation: down_arrow_bounce 2s linear infinite;
+// }
 
 .typeWriter{
     font-size: 75px;
@@ -89,6 +90,14 @@ a, a:visited{
 
 
 
+.top_div.svg{
+    width: 100%;
+    position: absolute;
+    top: 70vh;
+    fill: #111827;
+    z-index: 0;
+}
+
 // about
 
 .about{
@@ -97,6 +106,8 @@ a, a:visited{
     width: 50%;
     margin: auto;
     transition: 2s ease-in;
+    position: relative;
+    z-index: 100;
     // background-color: indigo;
     
 }
@@ -117,6 +128,7 @@ a, a:visited{
     top: 72vh;
     left: 26vh;
     opacity: 0;
+    z-index: 100;
     // transform: translate(-50%,-50%);
     transition: 1s ease-in;
 }
@@ -135,6 +147,7 @@ a, a:visited{
     top: 72vh;
     left: 26vh;
     opacity: 0;
+    z-index: 100;
     // transform: translate(-50%,-50%);
     animation: profile_pic_ping 3s linear infinite;
     animation-delay: 2s;
