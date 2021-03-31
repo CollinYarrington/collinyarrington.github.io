@@ -75,9 +75,19 @@ a, a:visited {
 .top_div.svg {
   width: 100%;
   position: absolute;
-  top: 70vh;
+  top: 64vh;
   fill: #111827;
+  z-index: 10;
+  overflow-x: hidden;
+}
+
+.bottom_div.svg {
+  width: 100%;
+  position: absolute;
+  top: 63vh;
+  fill: #008cff;
   z-index: 0;
+  overflow-x: hidden;
 }
 
 .about {
@@ -89,10 +99,14 @@ a, a:visited {
   transition: 2s ease-in;
   position: relative;
   z-index: 100;
+  -webkit-transform: translate(0, -10%);
+          transform: translate(0, -10%);
 }
 
 .about.appear {
   opacity: 1;
+  -webkit-transform: translate(0, 0%);
+          transform: translate(0, 0%);
 }
 
 .profile_pic {
@@ -118,7 +132,7 @@ a, a:visited {
 }
 
 .profile_pic_animate {
-  background-color: white;
+  background-color: #008cff;
   height: 250px;
   width: 250px;
   border-radius: 10000px;
