@@ -8,6 +8,7 @@
     <script src="/scripts/typeWriter.js"></script>
     <script src="/scripts/particle.js"></script>
     <script src="/scripts/animateScroll.js"></script>
+    <script src="/scripts/index.js"></script>
     <title>Collin Yarrington</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
     <nav class="nav_div">
         <div style="display: flex; justify-content: space-between;">
             <p class="logo">Portfolio</p>
-            <div class="burger_icon">
+            <div class="burger_icon" onclick="nav_toggle()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -41,9 +42,10 @@
     </header>
 
     <!-- profile pic -->
-    <div class="profile_pic_animate fade-in"></div>
-    <div class="profile_pic fade-in"></div>
-
+    <div class="picture">
+        <div class="profile_pic_animate fade-in"></div>
+        <div class="profile_pic fade-in"></div>
+    </div>
     <div class="svg top_div">
         <svg height="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 960.506 239.411" enable-background="new 0 0 960.506 239.411" xml:space="preserve">

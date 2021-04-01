@@ -152,6 +152,42 @@ a, a:visited {
   overflow-x: hidden;
 }
 
+.picture {
+  position: absolute;
+  z-index: 100;
+  top: 65vh;
+  left: 50%;
+  width: 250px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.profile_pic {
+  background-color: #111827;
+  background-image: url(/images/me.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 10000px;
+  position: absolute;
+  z-index: 100;
+}
+
+.profile_pic_animate {
+  background-color: #008cff;
+  height: 250px;
+  width: 250px;
+  border-radius: 10000px;
+  position: absolute;
+  opacity: 0;
+  z-index: 100;
+  -webkit-animation: profile_pic_ping 3s linear infinite;
+          animation: profile_pic_ping 3s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
 .about {
   opacity: 0;
   height: 50vh;
@@ -169,36 +205,6 @@ a, a:visited {
   opacity: 1;
   -webkit-transform: translate(0, 0%);
           transform: translate(0, 0%);
-}
-
-.profile_pic {
-  background-color: #111827;
-  background-image: url(/images/me.jpeg);
-  background-size: cover;
-  background-position: center;
-  height: 250px;
-  width: 250px;
-  border-radius: 10000px;
-  position: absolute;
-  top: 72vh;
-  left: 36vh;
-  z-index: 100;
-}
-
-.profile_pic_animate {
-  background-color: #008cff;
-  height: 250px;
-  width: 250px;
-  border-radius: 10000px;
-  position: absolute;
-  top: 72vh;
-  left: 36vh;
-  opacity: 0;
-  z-index: 100;
-  -webkit-animation: profile_pic_ping 3s linear infinite;
-          animation: profile_pic_ping 3s linear infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
 }
 
 .heading_format {
