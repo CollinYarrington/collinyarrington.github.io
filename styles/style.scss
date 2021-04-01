@@ -1,6 +1,11 @@
 $background:#111827;
 $cursor: rgb(0, 140, 255);
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 // fonts
 @font-face{
     font-family: NunitoSans;
@@ -12,18 +17,20 @@ $cursor: rgb(0, 140, 255);
     font-family: NunitoSans;  
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-//background
+// background
 .background{
     background-color:$background;
 }
 
-//navigation
+// navigation
+.logo {
+    color: white;
+    font-size: 30px;
+}
+
 .nav_div {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     background-color: $background;
     padding: 10px;
@@ -31,16 +38,20 @@ html {
     margin-bottom: auto;
 }
 
-.logo {
-    color: white;
-    font-size: 25px;
-}
-
 .nav_items{  
     display: inline-block;
     color: white;
     // margin: 12px auto auto 12px;
     font-size: 20px;
+    position: relative;
+    padding-left: 30px;
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.nav_ul{
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 a, a:visited{
@@ -48,7 +59,60 @@ a, a:visited{
     color: white;
 }
 
-//hero
+
+
+
+
+
+@media screen and (max-width: 768px){
+    .nav_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: $background;
+        padding: 10px;
+        padding-top: auto;
+        margin-bottom: auto;
+    }
+
+    .nav_items{  
+        display: block;
+        color: white;
+        // margin: 12px auto auto 12px;
+        font-size: 20px;
+        position: relative;
+        padding-left: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        &:hover{
+            background-color: rgb(0, 1, 75);
+        }
+    }
+
+    .nav_ul{
+        padding: 0;
+        border-top: 1px solid white;
+    }
+
+    // burger menu
+    .burger_icon{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 50px;
+        // background-color: red;
+    }
+
+    .bar{
+        height: 3px;
+        background-color: white;
+    }
+}
+
+
+
+
+// hero
 .hero{
     height: 89vh;
     background-image: url(/images/hero_image.jpg);
@@ -126,17 +190,17 @@ a, a:visited{
     border-radius: 10000px;
     position: absolute;
     top: 72vh;
-    left: 26vh;
-    opacity: 0;
+    left: 36vh;
+    // opacity: 0;
     z-index: 100;
     // transform: translate(-50%,-50%);
-    transition: 1s ease-in;
+    // transition: 1s ease-in;
 }
 
-.profile_pic.appear{
-    opacity: 1;
-    left: 36vh;
-}
+// .profile_pic.appear{
+//     opacity: 1;
+//     left: 36vh;
+// }
 
 .profile_pic_animate{
     background-color: $cursor;
@@ -145,19 +209,19 @@ a, a:visited{
     border-radius: 10000px;
     position: absolute;
     top: 72vh;
-    left: 26vh;
+    left: 36vh;
     opacity: 0;
     z-index: 100;
     // transform: translate(-50%,-50%);
     animation: profile_pic_ping 3s linear infinite;
     animation-delay: 2s;
-    transition: 1s ease-in;
+    // transition: 1s ease-in;
 }
 
-.profile_pic_animate.appear{
-    opacity: 1;
-    left: 36vh;
-}
+// .profile_pic_animate.appear{
+//     opacity: 1;
+//     left: 36vh;
+// }
 
 .heading_format{
     display: flex;

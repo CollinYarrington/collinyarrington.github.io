@@ -12,23 +12,35 @@
 </head>
 <body>
 <div class="background">
-    <nav class="">
-        <div class="nav_div">
-        <p class="logo">Portfolio</p>
-        <ul style="margin-top: auto; margin-bottom: auto;">
+
+
+    <!-- navigation -->
+    <nav class="nav_div">
+        <div style="display: flex; justify-content: space-between;">
+            <p class="logo">Portfolio</p>
+            <div class="burger_icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <ul class="nav_ul">
             <li class="nav_items"><a href="#about">About me</a></li>
             <li class="nav_items"><a href="#projects">Projects</a></li>
             <li class="nav_items"><a href="#contact">Contact me</a></li>
-        </ul>
-        </div>
+        </ul> 
+        
+        
     </nav>
 
+    <!-- Hero -->
     <header class="hero" id="particle-canvas">
         <div class="typeWriter" style="display: flex;">
             <p id="typeWriter" style="color: white;"></p><p class="cursor">|</p>
         </div>
     </header>
 
+    <!-- profile pic -->
     <div class="profile_pic_animate fade-in"></div>
     <div class="profile_pic fade-in"></div>
 
