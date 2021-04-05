@@ -1,5 +1,5 @@
 $background:#111827;
-$cursor: rgb(0, 140, 255);
+$blue: #008cff;
 
 html {
     scroll-behavior: smooth;
@@ -86,8 +86,13 @@ a, a:visited{
     
 
     .nav_ul{
+        display: none;
         padding: 0;
         border-top: 1px solid white;
+    }
+
+    .nav_ul.show{
+        display: block;
     }
 
     // burger menu
@@ -128,7 +133,7 @@ a, a:visited{
 
 .cursor{
     font-weight: bold;
-    color: $cursor;
+    color: $blue;
     animation: blink_cursor 1s linear infinite;
 }
 
@@ -145,7 +150,7 @@ a, a:visited{
     width: 100%;
     position: absolute;
     top: 63vh;
-    fill: $cursor;
+    fill: $blue;
     z-index: 0;
     overflow-x: hidden;
     // transform: translate(50%);
@@ -156,7 +161,7 @@ a, a:visited{
 .picture{
     position: absolute;
     z-index: 100;
-    top: 65vh;;
+    top: 65vh;
     left: 50%;
     width: 250px;
     transform: translate(-50%,0);
@@ -174,7 +179,7 @@ a, a:visited{
 }
 
 .profile_pic_animate{
-    background-color: $cursor;
+    background-color: $blue;
     height: 250px;
     width: 250px;
     border-radius: 10000px;
@@ -185,18 +190,33 @@ a, a:visited{
     animation-delay: 2s;
 }
 
+.picture.move_pic{
+    position: fixed;
+    // transform: translate(0,0);
+    animation: move_picture 2s ease-in-out forwards;
+    // animation-duration: 4s;
+}
+.picture.return_pic{
+    position: fixed;
+    transform: translate(-50%,0);
+    animation: return_picture 2s ease-in-out forwards;
+    // animation-duration: 4s;
+}
+
+
+
 @media screen and (max-width: 768px){
-    .profile_pic{
+    // .profile_pic{
         
-    }
+    // }
 
-    .profile_pic_animate{
+    // .profile_pic_animate{
         
-    }
+    // }
 
-    .picture{
+    // .picture{
 
-    }
+    // }
 }
 
 // about
@@ -238,7 +258,7 @@ a, a:visited{
     height: 5px;
     margin-top: auto;
     margin-bottom: auto;
-    background-color: $cursor;
+    background-color: $blue;
     border-radius: 12px;
 }
 
@@ -264,3 +284,25 @@ a, a:visited{
     0%{opacity:1; transform: scale(1.0); }
     100%{opacity:0; transform: scale(1.2); }
 }
+
+@keyframes move_picture{
+    from{
+        transform: scale(1.0);  
+    }
+    to{
+        transform: scale(0.5);
+        top: 2%;
+        left: 2%;
+    }
+} 
+@keyframes return_picture{
+        from{
+            transform: scale(0.5);
+            
+        }
+        to{
+            transform: scale(1.0);
+            top: 65vh;
+            left: 50%;
+        }
+    }

@@ -86,8 +86,12 @@ a, a:visited {
     background-color: #00014b;
   }
   .nav_ul {
+    display: none;
     padding: 0;
     border-top: 1px solid white;
+  }
+  .nav_ul.show {
+    display: block;
   }
   .burger_icon {
     display: -webkit-box;
@@ -186,6 +190,20 @@ a, a:visited {
           animation: profile_pic_ping 3s linear infinite;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+
+.picture.move_pic {
+  position: fixed;
+  -webkit-animation: move_picture 2s ease-in-out forwards;
+          animation: move_picture 2s ease-in-out forwards;
+}
+
+.picture.return_pic {
+  position: fixed;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: return_picture 2s ease-in-out forwards;
+          animation: return_picture 2s ease-in-out forwards;
 }
 
 .about {
@@ -311,6 +329,58 @@ a, a:visited {
     opacity: 0;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes move_picture {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    top: 2%;
+    left: 2%;
+  }
+}
+
+@keyframes move_picture {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    top: 2%;
+    left: 2%;
+  }
+}
+
+@-webkit-keyframes return_picture {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    top: 65vh;
+    left: 50%;
+  }
+}
+
+@keyframes return_picture {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    top: 65vh;
+    left: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */
