@@ -11,9 +11,7 @@
     <script src="/scripts/index.js"></script>
     <title>Collin Yarrington</title>
 </head>
-<body>
-<div class="background">
-
+<body class="background">
 
     <!-- navigation -->
     <nav class="nav_div">
@@ -29,10 +27,9 @@
             <li class="nav_items"><a href="#about">About me</a></li>
             <li class="nav_items"><a href="#projects">Projects</a></li>
             <li class="nav_items"><a href="#contact">Contact me</a></li>
-        </ul> 
-        
-        
+        </ul>  
     </nav>
+
 
     <!-- Hero -->
     <header class="hero" id="particle-canvas">
@@ -41,13 +38,36 @@
         </div>
     </header>
 
+
     <!-- profile pic -->
-    <div id="pic" class="picture" onmouseover="show_social_links()" onmouseout="hide_social_links()">
-        <div id="show_social_links" class="profile_pic_animate fade-in"></div>
-        <div class="profile_pic fade-in"></div>
+    <div id="pic" class="picture">
+        <div id="show_social_links" class="profile_pic_animate fade-in">
+            <ul id="ul_social_links" class="ul_social_links">
+                <li class="social_links"> 
+                    <a href="https://www.linkedin.com/in/collin-yarrington-4a9104181/" target="_blank">
+                    <img src="/images/linkedin.svg" alt="" height="118px" srcset="">
+                    </a>
+                </li>
+
+                <li class="social_links"> 
+                    <a href="https://www.instagram.com/collinyarrington/" target="_blank">
+                    <img src="/images/instagram.svg" alt="" height="118px" srcset="">
+                    </a>
+                </li>
+
+                <li class="social_links"> 
+                    <a href="https://www.linkedin.com/in/collin-yarrington-4a9104181/" target="_blank">
+                    <img src="/images/gmail.svg" alt="" height="118px" srcset="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="profile_pic fade-in"></div> 
     </div>
     <div id="track_one" class="picture"></div>
 
+
+    <!-- about -->
     <div class="svg top_div">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 960.506 572.828" enable-background="new 0 0 960.506 572.828" xml:space="preserve">
@@ -92,29 +112,34 @@
             In my spare time I enjoy playing video games or some times I would give myself coding challenges to complete in any programming 
             language I choose. Those projects I post to my github repository. Check my stuff out ;) 
         </p>
-
-
     </div>
 
-    <div id="projects" class="about fade-in">
+    
+    <div class="svg middle">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 390.954 612 286.038" enable-background="new 0 390.954 612 286.038" xml:space="preserve">
+            <path d="M-4.861,676.991h622.715V390.954c-200.707,72.122-160.676,57.063-369.301,21.981c-162.106-27.259-197.83,70.509-253.65,38.228L-4.861,676.991z"/>
+        </svg>
+    </div>
+    
+
+    <div style="background-color: white;">
+    <div id="projects" class="projects fade-in">
         <div class="heading_format">
             <div class="heading_placeholder"></div>
-            <div class="heading">
+            <div class="heading_project">
                 <p>Projects</p>
             </div>
             <div class="heading_placeholder"></div>
         </div>
     </br>
 
-    <div class="Projects">
         <div class="project_header">
             <img src="/images/work_space.svg" width="50%" alt="" srcset="">
-            <p class="paragraph" style="margin-top: auto; margin-bottom: auto; font-size: x-large;">
+            <p style="margin-top: auto; margin-bottom: auto; font-size: x-large;">
                 Here you can take a look at all the side projects I have done
             </p>
         </div>
         
-
         <div class="content_information">
             <div class="display_projects">
 
@@ -167,6 +192,8 @@
         </div>
 
     </div>
-</div>
+
+    </div>
+
 </body>
 </html>

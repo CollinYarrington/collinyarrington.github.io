@@ -41,9 +41,15 @@ window.addEventListener('scroll', () => {
     if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight && profile_state == true) {
        null;
     } else {
-        console.log('Element is NOT in the viewport!');
+        var elem = document.getElementById("show_social_links");
+        var links = document.getElementById("ul_social_links");
+
         profile_state = false;
         document.getElementById("pic").classList.add("move_pic");
+        
+        // elem.classList.remove("hide_social_links");
+        elem.classList.add("show_social_links");
+        links.classList.add("show");
     }
 
     var myElement = document.getElementById('track_one');
@@ -52,6 +58,11 @@ window.addEventListener('scroll', () => {
     if (track_one_bounding.top >= 0 && track_one_bounding.left >= 0 && track_one_bounding.right <= window.innerWidth && track_one_bounding.bottom <= window.innerHeight && profile_state == false) {
         profile_state = true;
         document.getElementById("pic").classList.remove("move_pic");
+        var elem = document.getElementById("show_social_links");
+
+        elem.classList.remove("show_social_links");
+        // elem.classList.add("hide_social_links");
+        links.classList.remove("show");
     }
     
 }, false);
