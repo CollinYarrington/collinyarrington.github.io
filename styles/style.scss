@@ -143,8 +143,9 @@ a, a:visited{
     position: absolute;
     bottom: 0;
     fill: #111827;
-    z-index: 10;
-    // overflow-x: hidden;
+    stroke: $blue;
+    stroke-width: 5px;
+    z-index: 100;
     transform: translate(0, 25%);
 }
 
@@ -153,8 +154,7 @@ a, a:visited{
     position: absolute;
     bottom: 10px;
     fill: $blue;
-    z-index: 0;
-    // overflow-x: hidden;
+    z-index: 50;
     transform: translate(0, 25%);
 }
 
@@ -169,7 +169,6 @@ a, a:visited{
     height: 255px;
     padding: 1%;
     transform: translate(-50%,0);
-    
 }
 
 .ul_social_links{
@@ -178,8 +177,6 @@ a, a:visited{
     width: 100%;
     display: none;
     list-style: none;
-    // padding: auto;
-    // align-items: center;
 }
 
 .ul_social_links.show{
@@ -202,7 +199,6 @@ a, a:visited{
     width: 250px;
     border-radius: 10000px;
     position: absolute;
-    // z-index: 1000; 
 }
 
 .profile_pic_animate{
@@ -212,7 +208,6 @@ a, a:visited{
     border-radius: 10000px;
     position: absolute;
     opacity: 0;
-    // z-index: 1000;
     animation: profile_pic_ping 3s linear infinite;
     animation-delay: 2s;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
@@ -223,7 +218,6 @@ a, a:visited{
     height: 0px;
     width: 0px;
     animation: move_picture 1s ease-in-out forwards;
-    // animation: show_social_links 2s ease-in forwards;
 }
 
 .profile_pic_animate.show_social_links{ 
@@ -250,14 +244,13 @@ a, a:visited{
 .about{
     opacity: 0;
     height: auto;
-    padding-bottom: 100px;
-    width: 80%;
-    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 137px;
     transition: 2s ease-in;
     position: relative;
     z-index: 100;
     transform: translate(0, -10%);
-    // background-color: indigo; 
 }
 
 .about.appear{
@@ -295,7 +288,14 @@ a, a:visited{
 
 .svg.middle{
     fill: white;
-    height: 600px;
+    stroke: $blue;
+    stroke-width: 3px;
+    transform: translate(0,50%);
+    position: relative;
+    z-index: 100;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
 }
 
 .heading_project{

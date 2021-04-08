@@ -18,10 +18,7 @@ const appearOnScroll = new IntersectionObserver
         } else {
             if(entry.target.classList.contains("fade-in")){
                 entry.target.classList.add('appear');
-            }else{
-                entry.target.classList.add('test');
             }
-            
             appearOnScroll.unobserve(entry.target);
         }
     });

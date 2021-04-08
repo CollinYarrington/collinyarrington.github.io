@@ -144,7 +144,9 @@ a, a:visited {
   position: absolute;
   bottom: 0;
   fill: #111827;
-  z-index: 10;
+  stroke: #008cff;
+  stroke-width: 5px;
+  z-index: 100;
   -webkit-transform: translate(0, 25%);
           transform: translate(0, 25%);
 }
@@ -154,7 +156,7 @@ a, a:visited {
   position: absolute;
   bottom: 10px;
   fill: #008cff;
-  z-index: 0;
+  z-index: 50;
   -webkit-transform: translate(0, 25%);
           transform: translate(0, 25%);
 }
@@ -248,9 +250,9 @@ a, a:visited {
 .about {
   opacity: 0;
   height: auto;
-  padding-bottom: 100px;
-  width: 80%;
-  margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 137px;
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
   position: relative;
@@ -294,7 +296,15 @@ a, a:visited {
 
 .svg.middle {
   fill: white;
-  height: 600px;
+  stroke: #008cff;
+  stroke-width: 3px;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  position: relative;
+  z-index: 100;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
 }
 
 .heading_project {
