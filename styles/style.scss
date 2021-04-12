@@ -38,6 +38,9 @@ html {
     padding: 10px;
     padding-top: auto;
     margin-bottom: auto;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
 }
 
 .nav_items{  
@@ -142,7 +145,7 @@ a, a:visited{
 .top_div.svg{
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     fill: #111827;
     stroke: $blue;
     stroke-width: 5px;
@@ -150,14 +153,14 @@ a, a:visited{
     transform: translate(0, 25%);
 }
 
-.bottom_div.svg{
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    fill: $blue;
-    z-index: 50;
-    transform: translate(0, 25%);
-}
+// .bottom_div.svg{
+//     width: 100%;
+//     position: absolute;
+//     bottom: 10px;
+//     fill: $blue;
+//     z-index: 50;
+//     transform: translate(0, 25%);
+// }
 
 // profile_pic
 
@@ -365,6 +368,17 @@ a, a:visited{
 
 .project_title{
     font-size: 18px;
+}
+
+
+
+// footer
+footer{
+    background-color: $background;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
 }
 
 
