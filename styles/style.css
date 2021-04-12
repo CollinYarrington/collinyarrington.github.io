@@ -124,8 +124,9 @@ a, a:visited {
 }
 
 .typeWriter {
-  font-size: 75px;
+  font-size: 6vw;
   position: fixed;
+  white-space: nowrap;
   top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -164,7 +165,7 @@ a, a:visited {
 .picture {
   position: absolute;
   z-index: 1000;
-  top: 65vh;
+  top: 63vh;
   left: 50%;
   width: 250px;
   height: 255px;
@@ -195,13 +196,15 @@ a, a:visited {
 
 .profile_pic {
   background-color: #111827;
-  background-image: url(/images/me.jpeg);
   background-size: cover;
-  background-position: center;
   height: 250px;
   width: 250px;
   border-radius: 10000px;
+  overflow: hidden;
   position: absolute;
+  opacity: 1;
+  -webkit-animation: profile_pic_switcher 25s ease-in infinite;
+          animation: profile_pic_switcher 25s ease-in infinite;
 }
 
 .profile_pic_animate {
@@ -376,6 +379,14 @@ a, a:visited {
   height: 250px;
 }
 
+.display_projects:hover {
+  border: 1px solid #111827;
+}
+
+.project_title {
+  font-size: 18px;
+}
+
 @-webkit-keyframes blink_cursor {
   from {
     opacity: 0;
@@ -453,6 +464,68 @@ a, a:visited {
     opacity: 0;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes profile_pic_switcher {
+  0% {
+    opacity: 0;
+    background-position: center;
+  }
+  1% {
+    opacity: 1;
+    background-image: url(/images/me.jpeg);
+    background-position: center;
+  }
+  49% {
+    opacity: 1;
+    background-image: url(/images/me.jpeg);
+  }
+  50% {
+    opacity: 0;
+    background-position: top 0px;
+  }
+  51% {
+    opacity: 1;
+    background-image: url(/images/also_me.jpeg);
+  }
+  99% {
+    opacity: 1;
+    background-image: url(/images/also_me.jpeg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes profile_pic_switcher {
+  0% {
+    opacity: 0;
+    background-position: center;
+  }
+  1% {
+    opacity: 1;
+    background-image: url(/images/me.jpeg);
+    background-position: center;
+  }
+  49% {
+    opacity: 1;
+    background-image: url(/images/me.jpeg);
+  }
+  50% {
+    opacity: 0;
+    background-position: top 0px;
+  }
+  51% {
+    opacity: 1;
+    background-image: url(/images/also_me.jpeg);
+  }
+  99% {
+    opacity: 1;
+    background-image: url(/images/also_me.jpeg);
+  }
+  100% {
+    opacity: 0;
   }
 }
 
