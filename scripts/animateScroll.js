@@ -1,6 +1,8 @@
 window.addEventListener('load', function () { 
 const faders = document.querySelectorAll('.fade-in');
-const profile = document.querySelectorAll('#pic');
+const skills = document.querySelectorAll('.skills');
+
+console.log(skills);
 
 
 const appearOptions = {
@@ -19,6 +21,9 @@ const appearOnScroll = new IntersectionObserver
             if(entry.target.classList.contains("fade-in")){
                 entry.target.classList.add('appear');
             }
+            if(entry.target.classList.contains("skills")){
+                entry.target.classList.add('load');
+            }
             appearOnScroll.unobserve(entry.target);
         }
     });
@@ -28,6 +33,10 @@ appearOptions);
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+skills.forEach(skill => {
+    appearOnScroll.observe(skill);
+});
+
 });
 
 var profile_state = true;

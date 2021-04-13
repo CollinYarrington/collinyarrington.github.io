@@ -246,6 +246,44 @@ a, a:visited{
     animation-duration: 2s;
 }
 
+// skills
+    .container {
+        width: 100%;
+        background-color: #ddd;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+  
+    .skills {
+        text-align: right;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: white;
+    }
+
+    .skill_p{
+        margin-top: 10px;
+        color:white;
+    }
+  
+    .html {width: 0%; background-color: orangered; }
+    .html.load{width: 100%; transition-duration: 2s; transition-delay: 1s;}
+    
+    .css {width: 0%; background-color: #2196F3;}
+    .css.load{width: 87%; transition-delay: 2s; transition-duration: 1.5s;}
+
+    .js {width: 0%; background-color: #f44336;}
+    .js.load{width: 70%; transition-delay: 3s; transition-duration: 2s;}
+
+    .php {width: 0%; background-color: rgb(93, 37, 197);}
+    .php.load{width: 89%; transition-duration: 2s; transition-delay: 3.5s;}
+
+    .ruby {width: 0%; background-color: red;}
+    .ruby.load{width: 60%; transition-duration: 2s; transition-delay: 4s;}
+
+    .c_sharp {width: 0%; background-color: #4CAF50;}
+    .c_sharp.load{width: 47%; transition-duration: 2s; transition-delay: 4.5s;}
+
 // about
 
 .about{
@@ -441,7 +479,7 @@ footer{
     }
     to{
         transform: scale(0.3);
-        top: 25%;
+        top: 14vh;
         left: 0px;
         // width: 600px;
         // margin-top: -200px;
@@ -459,6 +497,47 @@ footer{
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 939px){
+    .ul_social_links.show{
+       display: flex;
+       top: 50%;
+       left: -463px;
+       justify-content: space-evenly;
+       transform: translate(0, -15%);
+    }
+
+    @keyframes move_picture{
+        from{
+            transform: scale(1.0);
+            top: 1%;
+        }
+        to{
+            transform: scale(0.3);
+            bottom: 0px;
+            left: 0px;
+            // width: 600px;
+            // margin-top: -200px;
+            // margin-left: -225px;
+        }
+    } 
+
+    
+@keyframes show_social_links{
+    from{
+        
+    }
+    to{
+        background-color: white;
+        width: 1300px;
+        opacity: 1;
+    }
+}
+
+
+}
+
+
 
 // @keyframes hide_social_links{
 //     from{
