@@ -9,22 +9,7 @@
     <script src="/scripts/typeWriter.js"></script>
     <script src="/scripts/particle.js"></script>
     <script src="/scripts/index.js"></script>
-    <script>
-        function copyEmail(){
-        // var email = document.getElementById("email");
-        // email[0].select();
-        // document.execCommand("copy");
-
-        const el = document.createElement('textarea');
-        el.value = "collinyarrington.za@gmail.com";
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand('copy');
-        document.body.removeChild(el);
-
-        alert("Email Address has been copied to your clip board :D");
-    }
-    </script>
+    
 </head>
 <body class="background">
 
@@ -69,28 +54,6 @@
 
     <!-- profile pic -->
     <div id="pic" class="picture">
-        <div id="show_social_links" class="profile_pic_animate fade-in">
-            <ul id="ul_social_links" class="ul_social_links">
-                <li class="social_links"> 
-                    <a href="https://www.linkedin.com/in/collin-yarrington-4a9104181/" target="_blank">
-                    <img src="/images/linkedin.svg" alt="" height="118px" srcset="">
-                    </a>
-                </li>
-
-                <li class="social_links"> 
-                    <a href="https://www.instagram.com/collinyarrington/" target="_blank">
-                    <img src="/images/instagram.svg" alt="" height="118px" srcset="">
-                    </a>
-                </li>
-
-                <li class="social_links"> 
-                    <div class="tooltip">
-                        <span class="tooltiptext">Tooltip text</span>
-                        <img id="email" onclick="copyEmail()" value="collinyarrington.za@gmail.com" src="/images/gmail.svg" alt="" height="118px" srcset="">
-                    </div>
-                </li>
-            </ul>
-        </div>
         <div class="profile_pic fade-in"></div> 
     </div>
     <div id="track_one" class="picture"></div>
@@ -108,14 +71,19 @@
             <div class="heading_placeholder"></div>
         </div>
     </br>
+    <div class="about_content">
+        
+        <div class="image_div">
+            <img id="img1" class="picture img1" src="/images/me.jpeg" alt=""  width="100%" srcset="">
+            <img id="img2" class="picture" src="/images/also_me.jpeg" alt=""  width="100%" srcset="">
+        </div>
 
+        <div class="paragraph_div">
         <p class="paragraph">
             Hi there, my name is Collin Alex Yarrington I'm a young passionate developer that enjoys creating user friendly and professional web applications. 
             I have worked with many languages and I'm always eager to learn and apply my skills I have obtained over the past few years.
-        </p>
-    </br>
-
-        <p class="paragraph">
+        <br/>
+        <br/>
             I was born and raised in South Africa Western Cape.  I Developed an interest for all types of programming technologies from the age of twelve.
             My father introduced me to my first programming language which was JavaScript.  It was at this point I had made a deal with my father that if 
             I were to create anything using any programming language he would pay me 1000 rand...  I didn't develop anything until I hit college
@@ -124,15 +92,17 @@
             me the most. When I hit college I was not really sure if this was the correct career choice for me, but I kept going and kept learning and it wasn't 
             until the second year of college that made me 100% sure this is the right path for me in terms of career choice. I graduated with an 
             "Adanced Certificate in Graphic and Web Development" at the 2019.
-        </p>
-    </br>
-
-        <p class="paragraph">
+        <br/>
+        <br/>
             In my spare time I enjoy gaming but what I enjoy most about gaming is the many variations of personalities you come across that often lead to interesting conversations.
             When I find myself bored or not busy with anything I would set myself a programming challenge or I would request one from my friends or family to help me practice and test my knowlege.
             Those projects I post to my github repository. Check my stuff out ;)   
         </p>
         <span style="color:red;">!!  No projects listed yet  !!</span>
+    
+    </div>
+    </div>
+    
     </div>
 
 
@@ -222,7 +192,7 @@
     
             <br/>
             <center>
-            <h1>There is none listed projects currently but I am working on some!</h1>
+            <h1>There is no listed projects currently but I am working on some!</h1>
             </center>
             <br/>
     
@@ -261,16 +231,15 @@
         </div>
     
         <footer>
-          <h1>Thank you for showing interest in my work! :)</h1>  
-
           <div class="contact">
+            <h3>My contact information</h3>
               <ul>
-                  <h3>My contact information</h3>
                   <li>076 910 9772</li>
-                  <li>collinyarrington.za@gmail.com</li>
+                  <li class="email" onclick="copyEmail()">collinyarrington.za@gmail.com (feel free to email me or anything)</li>
               </ul>
           </div>
+          <h1 class="footer_message">Thank you for showing interest in my work! :)</h1>  
         <footer>
-    
+            
 </body>
 </html>

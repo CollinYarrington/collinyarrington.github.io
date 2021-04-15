@@ -5,6 +5,17 @@ window.addEventListener('load', function () {
     window.nav_toggle = function(){
         document.getElementById('nav').classList.toggle("show"); 
     }
+
+    window.copyEmail = function(){
+        const el = document.createElement('textarea');
+        el.value = "collinyarrington.za@gmail.com";
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    
+        alert("Email Address has been copied to your clipboard");
+    }
     
     
 
@@ -43,42 +54,61 @@ const appearOnScroll = new IntersectionObserver
     skills.forEach(skill => {
         appearOnScroll.observe(skill);
     });
+
+
+
+    
     
 });
 
 
-
-
-var profile_state = true;
-window.addEventListener('scroll', () => {
-    var myElement = document.getElementById('pic');
-    var bounding = myElement.getBoundingClientRect();
+// var profile_state = true;
+// window.addEventListener('scroll', () => {
+//     var myElement = document.getElementById('pic');
+//     var bounding = myElement.getBoundingClientRect();
     
-    if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight && profile_state == true) {
-       null;
-    } else {
-        var elem = document.getElementById("show_social_links");
-        var links = document.getElementById("ul_social_links");
+//     if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight && profile_state == true) {
+//        null;
+//     } else {
+//         var elem = document.getElementById("show_social_links");
+//         var links = document.getElementById("ul_social_links");
 
-        profile_state = false;
-        document.getElementById("pic").classList.add("move_pic");
+//         profile_state = false;
+//         document.getElementById("pic").classList.add("move_pic");
         
-        // elem.classList.remove("hide_social_links");
-        elem.classList.add("show_social_links");
-        links.classList.add("show");
-    }
+//         // elem.classList.remove("hide_social_links");
+//         elem.classList.add("show_social_links");
+//         links.classList.add("show");
+//     }
 
-    var myElement = document.getElementById('track_one');
-    var track_one_bounding = myElement.getBoundingClientRect();
+//     var myElement = document.getElementById('track_one');
+//     var track_one_bounding = myElement.getBoundingClientRect();
 
-    if (track_one_bounding.top >= 0 && track_one_bounding.left >= 0 && track_one_bounding.right <= window.innerWidth && track_one_bounding.bottom <= window.innerHeight && profile_state == false) {
-        profile_state = true;
-        document.getElementById("pic").classList.remove("move_pic");
-        var elem = document.getElementById("show_social_links");
+//     if (track_one_bounding.top >= 0 && track_one_bounding.left >= 0 && track_one_bounding.right <= window.innerWidth && track_one_bounding.bottom <= window.innerHeight && profile_state == false) {
+//         profile_state = true;
+//         document.getElementById("pic").classList.remove("move_pic");
+//         var elem = document.getElementById("show_social_links");
 
-        elem.classList.remove("show_social_links");
-        // elem.classList.add("hide_social_links");
-        links.classList.remove("show");
-    }
+//         elem.classList.remove("show_social_links");
+//         // elem.classList.add("hide_social_links");
+//         links.classList.remove("show");
+//     }
     
-}, false);
+// }, false);
+
+
+var image_status = true;
+setInterval(function(){ 
+    if(image_status){
+        image_status = false;
+        document.getElementById("img1").classList.remove("img1");
+        document.getElementById("img2").classList.add("img2");
+        
+    }else{
+        image_status = true;
+        document.getElementById("img2").classList.remove("img2");
+        document.getElementById("img1").classList.add("img1");
+    }
+}, 10000);
+
+

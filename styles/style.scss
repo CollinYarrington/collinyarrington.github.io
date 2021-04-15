@@ -2,58 +2,6 @@ $background:#111827;
 $blue: #008cff;
 
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 110%;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -158,7 +106,6 @@ a, a:visited{
         flex-direction: column;
         gap: 10px;
         width: 50px;
-        // background-color: red;
     }
 
     .bar{
@@ -206,97 +153,58 @@ a, a:visited{
     transform: translate(0, 25%);
 }
 
-// .bottom_div.svg{
-//     width: 100%;
-//     position: absolute;
-//     bottom: 10px;
-//     fill: $blue;
-//     z-index: 50;
-//     transform: translate(0, 25%);
-// }
-
 // profile_pic
+.about_content{
+    display: flex; 
+    // justify-content: center;
+    // flex-wrap: wrap;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+}
+
+.paragraph_div{
+    width: 75%;
+}
+
+@media screen and (max-width: 939px){
+    .about_content{
+        display: flex; 
+        flex-direction: column; 
+        // justify-content: center;
+    }
+    .image_div{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .paragraph_div{
+        width: 100%;
+        //   align-items: center;
+    }
+}
 
 .picture{
-    position: absolute;
-    z-index: 1000;
-    top: 63vh;
-    left: 50%;
-    width: 250px;
-    height: 255px;
-    padding: 1%;
-    transform: translate(-50%,0);
-}
-
-.ul_social_links{
-    position: absolute;
-    top: 350px;
-    width: 100%;
     display: none;
-    list-style: none;
+    // position: relative;
 }
 
-.ul_social_links.show{
-    display: block;
-}
-
-.social_links{
+.picture.img1{
+    top: -40px; 
     position: relative; 
-    left: 50%;
-    transform: translate(-25%);
-    margin-bottom: 250px;
-}
-
-.profile_pic{
-    background-color: #111827;
-    // background-image: url(/images/also_me.jpeg);
-    background-size: cover;
-    // background-position: top 0px;
-    height: 250px;
-    width: 250px;
-    border-radius: 10000px;
-    overflow: hidden;
-    position: absolute;
-    opacity: 1;
-    animation:profile_pic_switcher 25s ease-in infinite;
-}
-
-.profile_pic_animate{
-    background-color: $blue;
-    height: 250px;
-    width: 250px;
-    border-radius: 10000px;
-    position: absolute;
-    opacity: 0;
-    animation: profile_pic_ping 3s linear infinite;
-    animation-delay: 2s;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
-}
-
-.picture.move_pic{
-    position: fixed;
-    height: 0px;
-    width: 0px;
-    animation: move_picture 1s ease-in-out forwards;
-}
-
-.profile_pic_animate.show_social_links{ 
     display: block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    animation: show_social_links 1s ease-in forwards;
-    animation-delay: 1s;
 }
- 
-// .profile_pic_animate.hide_social_links{ 
-//     animation: hide_social_links 2s ease-out forwards;
-// }     
-    
 
-.picture.return_pic{
-    position: absolute;
-    transform: translate(-50%,0);
-    animation: return_picture 2s ease-in-out forwards;
-    animation-duration: 2s;
+.picture.img2{
+    top: -2px; 
+    position: relative; 
+    display: block;
+}
+
+.image_div{
+    border-radius: 1000px; 
+    overflow: hidden; 
+    height: 300px; 
+    width: 300px;
+    border: 5px solid $blue;
 }
 
 // skills
@@ -475,6 +383,18 @@ footer{
     padding: 25px;
 }
 
+.email{
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.footer_message{
+    margin-top:auto; 
+    margin-bottom:auto;
+}
+
 
 // Animation keyframes
 
@@ -494,128 +414,11 @@ footer{
     100%{opacity:0; transform: scale(1.2); }
 }
 
-@keyframes profile_pic_switcher{
-    0%{
-        opacity: 0;
-        background-position: center;
-    }
-    1%{
-        opacity: 1;
-        background-image: url(/images/me.jpeg);
-        background-position: center;
-    }
-    49%{
-        opacity: 1;
-        background-image: url(/images/me.jpeg);
-    }
-
-    50%{
-        opacity: 0;
-        background-position: top 0px;
-    }
-    51%{
-        opacity: 1;
-        background-image: url(/images/also_me.jpeg);
-        
-    }
-    99%{
-        opacity: 1;
-        background-image: url(/images/also_me.jpeg);
-        
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-@keyframes move_picture{
-    from{
-        transform: scale(1.0);
-        top: 1%;
-    }
-    to{
-        transform: scale(0.3);
-        top: 14vh;
-        left: 0px;
-        // width: 600px;
-        // margin-top: -200px;
-        // margin-left: -225px;
-    }
-} 
-
-@keyframes show_social_links{
-    from{
-        
-    }
-    to{
-        background-color: white;
-        height: 1300px;
-        opacity: 1;
-    }
-}
-
-@media screen and (max-width: 939px){
-    .ul_social_links.show{
-       display: flex;
-       top: 50%;
-       left: -463px;
-       justify-content: space-evenly;
-       transform: translate(0, -15%);
-    }
-
-    @keyframes move_picture{
-        from{
-            transform: scale(1.0);
-            top: 1%;
-        }
-        to{
-            transform: scale(0.3);
-            bottom: 0px;
-            left: 0px;
-            // width: 600px;
-            // margin-top: -200px;
-            // margin-left: -225px;
-        }
-    } 
-
-    
-@keyframes show_social_links{
-    from{
-        
-    }
-    to{
-        background-color: white;
-        width: 1300px;
-        opacity: 1;
-    }
-}
-
-
-}
 
 
 
-// @keyframes hide_social_links{
-//     from{
-//         background-color: white;
-//         height: 800px;
-//         opacity: 1;
-//     }
-//     to{
-//         background-color: $blue;
-//         // height: 250px;
-//         opacity: 0;
-//     }
-// }
 
-@keyframes return_picture{
-    from{
-        transform: scale(0.5);
-        
-    }
-    to{
-        transform: scale(1.0);
-        top: 65vh;
-        left: 50%;
-    }
-}
+
+
+
+
