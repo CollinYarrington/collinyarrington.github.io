@@ -270,19 +270,22 @@ a, a:visited{
     .html.load{width: 100%; transition-duration: 2s; transition-delay: 1s;}
     
     .css {width: 0%; background-color: #2196F3;}
-    .css.load{width: 87%; transition-delay: 2s; transition-duration: 1.5s;}
+    .css.load{width: 80%; transition-delay: 2s; transition-duration: 1.5s;}
 
     .js {width: 0%; background-color: #f44336;}
-    .js.load{width: 70%; transition-delay: 3s; transition-duration: 2s;}
+    .js.load{width: 83%; transition-delay: 3s; transition-duration: 2s;}
 
     .php {width: 0%; background-color: rgb(93, 37, 197);}
-    .php.load{width: 89%; transition-duration: 2s; transition-delay: 3.5s;}
+    .php.load{width: 77%; transition-duration: 2s; transition-delay: 3.5s;}
 
     .ruby {width: 0%; background-color: red;}
     .ruby.load{width: 60%; transition-duration: 2s; transition-delay: 4s;}
 
     .c_sharp {width: 0%; background-color: #4CAF50;}
-    .c_sharp.load{width: 47%; transition-duration: 2s; transition-delay: 4.5s;}
+    .c_sharp.load{width: 57%; transition-duration: 2s; transition-delay: 4.5s;}
+
+    .sql {width: 0%; background-color: #8b4caf;}
+    .sql.load{width: 80%; transition-duration: 2s; transition-delay: 5s;}
 
 // about
 

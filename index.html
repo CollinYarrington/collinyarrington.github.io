@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collin Yarrington</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <script src="/scripts/typeWriter.js"></script>
     <script src="/scripts/particle.js"></script>
     <script src="/scripts/index.js"></script>
-    <title>Collin Yarrington</title>
+    <script>
+        function copyEmail(){
+        var email = document.getElementById("email");
+        email[0].select();
+        document.execCommand("copy");
+    }
+    </script>
 </head>
 <body class="background">
 
@@ -68,9 +75,9 @@
                 </li>
 
                 <li class="social_links"> 
-                    <a href="mailto:collinyarrington.za@gmail.com">
-                    <img src="/images/gmail.svg" alt="" height="118px" srcset="">
-                    </a>
+                    
+                    <img id="email" onclick="copyEmail()" value="collinyarrington.za@gmail.com" src="/images/gmail.svg" alt="" height="118px" srcset="">
+                    
                 </li>
             </ul>
         </div>
@@ -94,23 +101,27 @@
 
         <p class="paragraph">
             I'm a young passionate developer that wants to grow.  
-            I have worked with many languages such as Html & Css / JavaScript / Ruby / C# / Php / Asp.net / and along with many frameworks
+            I have worked with many languages such as Html & Css / JavaScript / Ruby / C# / Php / SQL and I'm always open to learning new things and getting problems solved.
         </p>
     </br>
 
         <p class="paragraph">
             I was born and raised in South Africa Western Cape.  I Developed an interest for all types of programming technologies from the age of twelve,
-            My father introduced me to my first programming language which was JavaScript.  It was at this point i had made a deal with my father that if 
-            i were to create anything using any programming language he would pay me 1000 rand...  I didn't develop anything until i hit college.
-            (at this point up until now i had forgotten about the deal)
+            My father introduced me to my first programming language which was JavaScript.  It was at this point I had made a deal with my father that if 
+            I were to create anything using any programming language he would pay me 1000 rand...  I didn't develop anything until I hit college.
+            (at this point up until now I had forgotten about the deal) besides the deal I made it motivated to explore my interest and help me figure out 
+            what I wanted to do for a living for the rest of my life. My father is a software engineer and just watching the things he achived by writing code inspired 
+            me the most. When I hit college I was not really sure if this was the correct career choice for me, but I kept going and kept learning and it wasn't 
+            until the second year of college that made me 100% sure this is the right path for me in terms of career choice.
         </p>
     </br>
 
         <p class="paragraph">
             In my spare time I enjoy gaming but what I enjoy most about gaming is the many variations of personalities you come across that often lead to interesting conversations.
-            Sometimes I would set myself a programming challenge or I would request one from my friends or family to help me practice and test my knowlege.Those projects I post 
-            to my github repository. Check my stuff out ;)   <span style="color:red;">!!WARNING there is nothing there yet!!</span>
+            When I find myself bored or not busy with anything I would set myself a programming challenge or I would request one from my friends or family to help me practice and test my knowlege.
+            Those projects I post to my github repository. Check my stuff out ;)   
         </p>
+        <span style="color:red;">!!  No projects listed yet  !!</span>
     </div>
 
 
@@ -126,34 +137,39 @@
         </div>
 
         <p class="skill_p">HTML</p>
-        <div class="container">
-        <div class="skills html">100%</div>
+            <div class="container">
+            <div class="skills html">100%</div>
         </div>
 
         <p class="skill_p">CSS/SCSS</p>
-        <div class="container">
-        <div class="skills css">87%</div>
+            <div class="container">
+            <div class="skills css">80%</div>
         </div>
 
         <p class="skill_p">JavaScript</p>
-        <div class="container">
-        <div class="skills js">70%</div>
+            <div class="container">
+            <div class="skills js">83%</div>
         </div>
 
         <p class="skill_p">PHP</p>
-        <div class="container">
-        <div class="skills php">60%</div>
+            <div class="container">
+            <div class="skills php">77%</div>
         </div>
 
         <p class="skill_p">Ruby</p>
-        <div class="container">
-        <div class="skills ruby">60%</div>
+            <div class="container">
+            <div class="skills ruby">60%</div>
         </div>
 
         <p class="skill_p">C#</p>
-        <div class="container">
-        <div class="skills c_sharp">47%</div>
+            <div class="container">
+            <div class="skills c_sharp">57%</div>
         </div>
+
+        <p class="skill_p">SQL</p>
+        <div class="container">
+        <div class="skills sql">80%</div>
+    </div>
         
     </div>
 

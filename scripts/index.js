@@ -1,8 +1,12 @@
+// alert("Note this page is still in development");
+
 window.addEventListener('load', function () { 
-    
+  
     window.nav_toggle = function(){
         document.getElementById('nav').classList.toggle("show"); 
     }
+    
+    
 
 const faders = document.querySelectorAll('.fade-in');
 const skills = document.querySelectorAll('.skills');
@@ -39,7 +43,10 @@ const appearOnScroll = new IntersectionObserver
     skills.forEach(skill => {
         appearOnScroll.observe(skill);
     });
+    
 });
+
+
 
 
 var profile_state = true;
