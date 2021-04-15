@@ -11,9 +11,18 @@
     <script src="/scripts/index.js"></script>
     <script>
         function copyEmail(){
-        var email = document.getElementById("email");
-        email[0].select();
-        document.execCommand("copy");
+        // var email = document.getElementById("email");
+        // email[0].select();
+        // document.execCommand("copy");
+
+        const el = document.createElement('textarea');
+        el.value = "collinyarrington.za@gmail.com";
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+
+        alert("Email Address has been copied to your clip board :D");
     }
     </script>
 </head>
@@ -75,9 +84,10 @@
                 </li>
 
                 <li class="social_links"> 
-                    
-                    <img id="email" onclick="copyEmail()" value="collinyarrington.za@gmail.com" src="/images/gmail.svg" alt="" height="118px" srcset="">
-                    
+                    <div class="tooltip">
+                        <span class="tooltiptext">Tooltip text</span>
+                        <img id="email" onclick="copyEmail()" value="collinyarrington.za@gmail.com" src="/images/gmail.svg" alt="" height="118px" srcset="">
+                    </div>
                 </li>
             </ul>
         </div>
@@ -100,19 +110,20 @@
     </br>
 
         <p class="paragraph">
-            I'm a young passionate developer that wants to grow.  
-            I have worked with many languages such as Html & Css / JavaScript / Ruby / C# / Php / SQL and I'm always open to learning new things and getting problems solved.
+            Hi there, my name is Collin Alex Yarrington I'm a young passionate developer that enjoys creating user friendly and professional web applications. 
+            I have worked with many languages and I'm always eager to learn and apply my skills I have obtained over the past few years.
         </p>
     </br>
 
         <p class="paragraph">
-            I was born and raised in South Africa Western Cape.  I Developed an interest for all types of programming technologies from the age of twelve,
+            I was born and raised in South Africa Western Cape.  I Developed an interest for all types of programming technologies from the age of twelve.
             My father introduced me to my first programming language which was JavaScript.  It was at this point I had made a deal with my father that if 
-            I were to create anything using any programming language he would pay me 1000 rand...  I didn't develop anything until I hit college.
-            (at this point up until now I had forgotten about the deal) besides the deal I made it motivated to explore my interest and help me figure out 
-            what I wanted to do for a living for the rest of my life. My father is a software engineer and just watching the things he achived by writing code inspired 
+            I were to create anything using any programming language he would pay me 1000 rand...  I didn't develop anything until I hit college
+            (at this point up until now I had forgotten about the deal). Besides the deal it motivated me to explore my interest and help me figure out 
+            what I wanted to do for a living. My father is a software engineer and just watching the things he achieved by writing code, inspired 
             me the most. When I hit college I was not really sure if this was the correct career choice for me, but I kept going and kept learning and it wasn't 
-            until the second year of college that made me 100% sure this is the right path for me in terms of career choice.
+            until the second year of college that made me 100% sure this is the right path for me in terms of career choice. I graduated with an 
+            "Adanced Certificate in Graphic and Web Development" at the 2019.
         </p>
     </br>
 
@@ -251,6 +262,14 @@
     
         <footer>
           <h1>Thank you for showing interest in my work! :)</h1>  
+
+          <div class="contact">
+              <ul>
+                  <h3>My contact information</h3>
+                  <li>076 910 9772</li>
+                  <li>collinyarrington.za@gmail.com</li>
+              </ul>
+          </div>
         <footer>
     
 </body>
