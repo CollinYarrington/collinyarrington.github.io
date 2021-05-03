@@ -222,6 +222,28 @@ a, a:visited {
   overflow: hidden;
 }
 
+.skill_heading {
+  color: white;
+  font-size: 25px;
+  white-space: nowrap;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  background-color: #333;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #5c5c5c;
+  text-align: left;
+  padding: 8px;
+}
+
 .skills {
   text-align: right;
   padding-top: 5px;
